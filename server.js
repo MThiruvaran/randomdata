@@ -14,7 +14,7 @@ const randomTemperature = (min, max) => {
 
 const medDataNormal = {
   bodyTemperature: randomTemperature(35.5, 37.5),
-  bloodPressure: randomNumber(90, 120),
+  bloodPressure: randomNumber(80, 120),
   respiration: randomNumber(12, 16),
   glucose: randomNumber(72, 140),
   heartRate: randomNumber(60, 100),
