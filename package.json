@@ -1,0 +1,16 @@
+{
+  "name": "data-generator",
+  "version": "1.0.0",
+  "description": "this api is to generate random health values",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "thiruvaran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
