@@ -12,7 +12,7 @@ const randomTemperature = (min, max) => {
   return temperature.toFixed(2);
 };
 
-const medDataNormal = {
+const medDataNormal = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(80, 120),
   respiration: randomNumber(12, 16),
@@ -20,9 +20,9 @@ const medDataNormal = {
   heartRate: randomNumber(60, 100),
   oxygenSaturation: randomNumber(95, 100),
   cholesterol: randomNumber(125, 200),
-};
+});
 
-const medDataCHD = {
+const medDataCHD = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(12, 16),
@@ -30,9 +30,9 @@ const medDataCHD = {
   heartRate: randomNumber(45, 60),
   oxygenSaturation: randomNumber(95, 100),
   cholesterol: randomNumber(200, 270),
-};
+});
 
-const medDataBronchiectasis = {
+const medDataBronchiectasis = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(40, 60),
@@ -40,9 +40,9 @@ const medDataBronchiectasis = {
   heartRate: randomNumber(60, 100),
   oxygenSaturation: randomNumber(95, 100),
   cholesterol: randomNumber(125, 200),
-};
+});
 
-const medDataHypoxemia = {
+const medDataHypoxemia = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(12, 16),
@@ -50,9 +50,9 @@ const medDataHypoxemia = {
   heartRate: randomNumber(60, 100),
   oxygenSaturation: randomNumber(50, 96),
   cholesterol: randomNumber(125, 200),
-};
+});
 
-const medDataDiabetes = {
+const medDataDiabetes = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(12, 16),
@@ -60,9 +60,9 @@ const medDataDiabetes = {
   heartRate: randomNumber(60, 100),
   oxygenSaturation: randomNumber(95, 100),
   cholesterol: randomNumber(125, 200),
-};
+});
 
-const medDataPreDiabetes = {
+const medDataPreDiabetes = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(12, 16),
@@ -70,9 +70,9 @@ const medDataPreDiabetes = {
   heartRate: randomNumber(60, 100),
   oxygenSaturation: randomNumber(95, 100),
   cholesterol: randomNumber(125, 200),
-};
+});
 
-const medDataModerateAcuteAsthma = {
+const medDataModerateAcuteAsthma = () => ({
   bodyTemperature: randomTemperature(35.5, 37.5),
   bloodPressure: randomNumber(90, 120),
   respiration: randomNumber(20, 30),
@@ -80,54 +80,54 @@ const medDataModerateAcuteAsthma = {
   heartRate: randomNumber(100, 125),
   oxygenSaturation: randomNumber(92, 95),
   cholesterol: randomNumber(125, 200),
-};
+});
 
 app.get("/api/normal", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataNormal,
+    data: medDataNormal(),
   });
 });
 
 app.get("/api/diabetes", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataDiabetes,
+    data: medDataDiabetes(),
   });
 });
 
 app.get("/api/prediabetes", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataPreDiabetes,
+    data: medDataPreDiabetes(),
   });
 });
 
 app.get("/api/moderateacuteasthma", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataModerateAcuteAsthma,
+    data: medDataModerateAcuteAsthma(),
   });
 });
 
 app.get("/api/hypoxemia", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataHypoxemia,
+    data: medDataHypoxemia(),
   });
 });
 
 app.get("/api/bronchiectasis", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataBronchiectasis,
+    data: medDataBronchiectasis(),
   });
 });
 
 app.get("/api/chd", (req, res) => {
   res.status(200).json({
     status: "success",
-    data: medDataCHD,
+    data: medDataCHD(),
   });
 });
 
